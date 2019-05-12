@@ -1,0 +1,300 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button{
+    padding:0;
+    display: inline-block;
+    position: relative;
+    background: none;
+    background-color:#1d1d1d;
+    color:#fff;
+    border: none;
+    width: 200px;
+    margin-top:1rem;
+}
+.into{
+
+    display: block;
+    font-size: 12px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+}
+button:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.linebox::before,.linebox::after{
+    position: absolute;
+    content: "";
+    width:100%;
+    height:2px;
+    background:#000;
+}
+
+.linebox .into::before,.linebox .into::after{
+    position:absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    background:#000;
+}
+.linebox .into::after{
+    height: 100%;
+}
+.linebox::before{
+    top: 0;
+}
+.linebox::after{
+    bottom: 0;
+}
+.linebox .into::before{
+    left: 0;
+}
+.linebox .into::after{
+    right: 0;
+}
+
+/*#7EC2C2 #9DDCDC #FFF4E1 #E67A7A*/
+.linebox{
+    background-color:#7EC2C2;
+    color: #FFF4E1;
+}
+.linebox:hover{
+    background-color: rgba(126, 194, 194,0.5);
+
+}
+.linebox::before,.linebox::after,.linebox .into::before,.linebox .into::after{
+    background-color: #E67A7A;
+    transition: all 0.2s linear;
+}
+.linebox::before,.linebox::after{
+    width:0;
+}
+.linebox .into::before,.linebox .into::after{
+    height:0;
+}
+.linebox:hover::before,.linebox:hover::after{
+    width: 100%;
+}
+.linebox .into:hover::before,.linebox .into:hover::after{
+    height: 100%;
+}
+
+.linebox.one::before{
+    transition-delay: 0.6s;
+    left: 0;
+}
+.linebox.one::after{
+    transition-delay: 0.2s;
+    right: 0;
+}
+.linebox.one .into::before{
+    transition-delay: 0s;
+    bottom: 0;
+}
+.linebox.one .into::after{
+    transition-delay: 0.4s;
+    top: 0;
+}
+.linebox.one:hover::before{
+    transition-delay: 0s;
+}
+.linebox.one:hover::after{
+    transition-delay: 0.4s;
+}
+.linebox.one .into:hover::before{
+    transition-delay: 0.6s;
+}
+.linebox.one .into:hover::after{
+    transition-delay: 0.2s;
+}
+
+.linebox.two::before{
+    transition-delay: 0s;
+    right: 0;
+}
+.linebox.two::after{
+    transition-delay: 0.4s;
+    left: 0;
+}
+.linebox.two .into::before{
+    transition-delay: 0.6s;
+    top: 0;
+}
+.linebox.two .into::after{
+    transition-delay: 0.2s;
+    bottom: 0;
+}
+.linebox.two:hover::before{
+    transition-delay: 0.6s;
+}
+.linebox.two:hover::after{
+    transition-delay: 0.2s;
+}
+.linebox.two .into:hover::before{
+    transition-delay: 0s;
+}
+.linebox.two .into:hover::after{
+    transition-delay: 0.4s;
+}
+
+.linebox.three::before{
+    transition-delay: 0.6s;
+    left: 0;
+}
+.linebox.three::after{
+    transition-delay: 0.4s;
+    left: 0;
+}
+.linebox.three .into::before{
+    transition-delay: 0.2s;
+    top: 0;
+}
+.linebox.three .into::after{
+    transition-delay: 0s;
+    top: 0;
+}
+.linebox.three:hover::before{
+    transition-delay: 0s;
+}
+.linebox.three:hover::after{
+    transition-delay: 0.2s;
+}
+.linebox.three .into:hover::before{
+    transition-delay: 0.4s;
+}
+.linebox.three .into:hover::after{
+    transition-delay: 0.6s;
+}
+
+.linebox.four::before{
+    transition-delay: 0.2s;
+    right: 0;
+}
+.linebox.four::after{
+    transition-delay: 0s;
+    right: 0;
+}
+.linebox.four .into::before{
+    transition-delay: 0.6s;
+    bottom: 0;
+}
+.linebox.four .into::after{
+    transition-delay: 0.4s;
+    bottom: 0;
+}
+.linebox.four:hover::before{
+    transition-delay: 0.4s;
+}
+.linebox.four:hover::after{
+    transition-delay: 0.6s;
+}
+.linebox.four .into:hover::before{
+    transition-delay: 0s;
+}
+.linebox.four .into:hover::after{
+    transition-delay: 0.2s;
+}
+
+/*#516C9D #7B9AD0 #DEDEDE #FF9800*/
+.colorline{
+    background-color:#516C9D;
+    color: #7B9AD0;
+}
+.colorline:hover{
+    background-color:#516C9D;
+    color: #7B9AD0;
+}
+.colorline::before{
+    position: absolute;
+    content: "";
+    background-color:  #FF9800;
+    color:#fff;
+    opacity: 0.8;
+    transition: all 0.2s linear;
+}
+.colorline.one::before{
+    left:0;
+    width:0;
+    height:100%;
+}
+
+.colorline.one:hover::before{
+    width: 100%;
+}
+.colorline.two::before{
+    left:0;
+    width:100%;
+    height:0;
+}
+.colorline.two:hover::before{
+    height: 100%;
+}
+.colorline.three::before{
+    right:0;
+    width:0;
+    height:100%;
+}
+.colorline.three:hover::before{
+    width: 100%;
+}
+.colorline.four::before{
+    left:0;
+    bottom:0;
+    width:100%;
+    height:0;
+}
+.colorline.four:hover::before{
+    height: 100%;
+}
+
+/*#79BD9A #A8DBA8 #EFEFEF #757575*/
+.colorgate{
+    background-color:#A8DBA8;
+    color: #EFEFEF;
+}
+.colorgate:hover{
+    background-color:#A8DBA8;
+    color: #EFEFEF;
+}
+.colorgate::before,.colorgate::after{
+    position: absolute;
+    content: "";
+    background-color: #79BD9A;
+    color:#fff;
+    opacity: 0.8;
+    transition: all 0.2s linear;
+}
+.colorgate.one::before,.colorgate.one::after,.colorgate.two::before,.colorgate.two::after{
+    width:50%;
+    height:100%;
+}
+.colorgate.one::before{
+    top: 0;
+    left: 0;
+    width:0;
+}
+.colorgate.one::after{
+    top:0;
+    right: 0;
+    width: 0;
+}
+.colorgate.one:hover::before,.colorgate.one:hover::after {
+    width: 50%;
+}
+.colorgate.two::before{
+    left:0;
+    top: 0;
+}
+.colorgate.two::after{
+    right:0;
+    top: 0;
+}
+.colorgate.two:hover::before,.colorgate.two:hover::after{
+    width:0;
+}
