@@ -16,7 +16,6 @@ button{
     margin-top:1rem;
 }
 .into{
-
     display: block;
     font-size: 12px;
     padding-top: 19px;
@@ -297,4 +296,55 @@ button:hover{
 }
 .colorgate.two:hover::before,.colorgate.two:hover::after{
     width:0;
+}
+
+/* #260e78 : #dff687*/
+.rotatebox{
+    position: relative;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+.rotatebox span{
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    text-align: center;
+    line-height: 52px;
+    transition: all .3s;
+    transform-origin: 50% 50% -28px;
+    backface-visibility: hidden;
+}
+.rotatebox span:nth-child(1){
+    background-color: #260e78;
+    color: #dff687;
+}
+.rotatebox span:nth-child(2){
+    background-color: #dff687;
+    color: #260e78;
+}
+.rotatebox.one span:nth-child(1){
+    transform: rotateX(90deg);
+}
+.rotatebox.one span:nth-child(2){
+    transform: rotateX(0deg);
+}
+.rotatebox.one:hover span:nth-child(1){
+    transform: rotateX(0deg);
+}
+.rotatebox.one:hover span:nth-child(2){
+    transform: rotateX(-90deg);
+}
+.rotatebox.two span:nth-child(1){
+    transform: rotateX(-90deg);
+}
+.rotatebox.two span:nth-child(2){
+    transform: rotateX(0deg);
+}
+.rotatebox.two:hover span:nth-child(1){
+    transform: rotateX(0deg);
+}
+.rotatebox.two:hover span:nth-child(2){
+    transform: rotateX(90deg);
 }
